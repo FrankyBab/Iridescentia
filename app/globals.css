@@ -17,11 +17,92 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-museo-moderno), sans-serif;
+  cursor: none;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@keyframes snake-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.btn-custom {
+  position: relative;
+  padding: 12px 24px;
+  color: white;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  z-index: 1;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: fixed; /* Positionne le bouton de manière fixe par rapport à la fenêtre */
+  bottom: 0;
+  margin-bottom: 16px;
+}
+
+.btn-custom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(5px); /* Effet de flou sur le fond uniquement */
+  
+}
+
+.btn-custom:hover {
+  background: linear-gradient(45deg, #03F7FC, #E4AA0A, #D85040, #AF2898, #0C54FB);
+  background-size: 100%;
+  background-position: 100%;
+  color: rgb(255, 255, 255); /* optionnel si tu veux changer la couleur du texte */
+  transition: background-position 1s ease, color 0.5s ease;
+  border-radius: 30px;
+  border: 1px solid transparent;
+}
+
+.btn-custom::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  z-index: -1;
+  pointer-events: none;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  animation: border-draw 10s linear infinite;
+}
+
+@keyframes border-draw {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  25% {
+    clip-path: polygon(0 0, 100% 0, 0 100%, 0 100%);
+  }
+  50% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  75% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
