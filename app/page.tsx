@@ -174,10 +174,10 @@ export default function Home() {
         <div className="w-3/4 h-0.5 bg-white mb-6 ml-16 mr-16" />
         <div className="w-full mt-8">
         <p
-  className="text-white text-7xl font-bold ml-16"
+  className="text-white text-7xl font-regular ml-16"
   style={{ fontFamily: 'var(--font-museo-moderno)' }}
 >
-Nous offrons des services complets en développement web (sites et applications), en design (maquettes, affiches, animations) et en communication (stratégie, réseaux sociaux), pour créer des expériences numériques sur mesure et renforcer votre présence en ligne.
+  Nous offrons des services complets en développement web (sites et applications), en design (maquettes, affiches, animations) et en communication (<strong>stratégie</strong>, <strong>réseaux sociaux</strong>), pour créer des expériences numériques sur mesure et renforcer votre <strong>présence en ligne</strong>.
 </p>
         </div>
       </div>
@@ -215,7 +215,7 @@ Nous offrons des services complets en développement web (sites et applications)
   className="text-white text-sm self-end relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-white after:scale-x-0 after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-300"
   style={{ fontFamily: 'var(--font-museo-moderno)', maxWidth: '320px', whiteSpace: 'normal' }}
 >
-  LinkedIn
+  Linkedin
 </a>
     </div>
 
@@ -240,7 +240,7 @@ Nous offrons des services complets en développement web (sites et applications)
       className="text-white text-sm self-end relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-white after:scale-x-0 after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-300"
       style={{ fontFamily: 'var(--font-museo-moderno)', maxWidth: '320px', whiteSpace: 'normal' }}
     >
-      LinkedIn
+      Linkedin
     </a>
     </div>
 
@@ -265,7 +265,7 @@ Nous offrons des services complets en développement web (sites et applications)
       className="text-white text-sm self-end relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-white after:scale-x-0 after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-300"
       style={{ fontFamily: 'var(--font-museo-moderno)', maxWidth: '320px', whiteSpace: 'normal' }}
     >
-      LinkedIn
+      Linkedin
     </a>
     </div>
   </div>
